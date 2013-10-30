@@ -1,0 +1,5 @@
+vhost_manager_api:
+    resource: "@VhostManagerApiBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
