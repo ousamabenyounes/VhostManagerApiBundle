@@ -3,3 +3,7 @@ vhost_manager_api:
     type:     annotation
     prefix:   /
 
+
+users:
+    type:   rest
+    ressource:    VhostManager/ApiBundle/Controller/UsersController
