@@ -5,6 +5,7 @@ imports:
 framework:
     #esi:             ~
     #translator:      { fallback: %locale% }
+    translator: ~
     secret:          %secret%
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
@@ -69,12 +70,17 @@ sensio_framework_extra:
     view:    { annotations: false}
     router:    { annotations: true}
 
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: VhostManager\ApiBundle\Entity\User
+
+
 fos_rest:
     format_listener:
-        prefer_extension: false
+            rules:
+                prefer_extension: true
     view:
         view_response_listener: true
-
-
 
 
