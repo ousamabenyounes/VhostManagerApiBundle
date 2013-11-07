@@ -10,15 +10,18 @@ namespace VhostManager\ApiBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations\View;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
+use VhostManager\ApiBundle\Entity\User;
 
 
-class UsersController extends Controller {
+class UsersController extends Controller
+{
 
     /**
      * @return array
      * @View()
      */
-    public function getUserAction()
+    public function getUsersAction()
     {
         $users = $this->getDoctrine()->getRepository('VhostManagerApiBundle:User')
                 ->findAll();
@@ -26,5 +29,16 @@ class UsersController extends Controller {
         return array('users' => $users);
     }
 
+
+    /**
+     * @param User $user
+     * @return array
+     * @View()
+     * @ParamConverter("user", class="VhostManagerApiBundle:User")
+     */
+    public function getUserAction(User $user)
+    {
+        return array('user' => $user);
+    }
 
 } 
