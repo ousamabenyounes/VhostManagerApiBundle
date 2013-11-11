@@ -12,7 +12,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use FOS\RestBundle\Controller\Annotations\View;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use VhostManager\ApiBundle\Entity\User;
-
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class UsersController extends Controller
 {
@@ -23,8 +23,18 @@ class UsersController extends Controller
      */
     public function getUsersAction()
     {
+
         $users = $this->getDoctrine()->getRepository('VhostManagerApiBundle:User')
-                ->findAll();
+            ->findAll();
+        var_dump($users);
+
+        return new JsonResponse(array('name' => 'ous'));
+
+
+
+        return array('users' => array('1' => 22));
+
+
 
         return array('users' => $users);
     }

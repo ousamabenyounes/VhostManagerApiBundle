@@ -20,7 +20,8 @@
         "sensio/generator-bundle": "2.3.*",
         "incenteev/composer-parameter-handler": "~2.0",
         "jms/serializer-bundle": "@stable",
-        "friendsofsymfony/rest-bundle": "@stable"
+        "friendsofsymfony/rest-bundle": "1.0.*",
+        "friendsofsymfony/user-bundle": "~2.0@dev"
     },
     "scripts": {
         "post-install-cmd": [

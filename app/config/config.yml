@@ -77,10 +77,7 @@ fos_user:
 
 
 fos_rest:
-    format_listener:
-            rules:
-                prefer_extension: true
     view:
-        view_response_listener: true
+        jsonp_handler: ~
 
 
