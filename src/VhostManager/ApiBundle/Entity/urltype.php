@@ -5,12 +5,12 @@ namespace VhostManager\ApiBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * projects
+ * urltype
  *
  * @ORM\Table()
  * @ORM\Entity
  */
-class projects
+class urltype
 {
     /**
      * @var integer
@@ -35,20 +35,6 @@ class projects
      */
     private $description;
 
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="created", type="datetime")
-     */
-    private $created;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="updated", type="datetime")
-     */
-    private $updated;
-
 
     /**
      * Get id
@@ -64,7 +50,7 @@ class projects
      * Set name
      *
      * @param string $name
-     * @return projects
+     * @return urltype
      */
     public function setName($name)
     {
@@ -87,7 +73,7 @@ class projects
      * Set description
      *
      * @param string $description
-     * @return projects
+     * @return urltype
      */
     public function setDescription($description)
     {
@@ -104,51 +90,5 @@ class projects
     public function getDescription()
     {
         return $this->description;
-    }
-
-    /**
-     * Set created
-     *
-     * @param \DateTime $created
-     * @return projects
-     */
-    public function setCreated($created)
-    {
-        $this->created = $created;
-    
-        return $this;
-    }
-
-    /**
-     * Get created
-     *
-     * @return \DateTime 
-     */
-    public function getCreated()
-    {
-        return $this->created;
-    }
-
-    /**
-     * Set updated
-     *
-     * @param \DateTime $updated
-     * @return projects
-     */
-    public function setUpdated($updated)
-    {
-        $this->updated = $updated;
-    
-        return $this;
-    }
-
-    /**
-     * Get updated
-     *
-     * @return \DateTime 
-     */
-    public function getUpdated()
-    {
-        return $this->updated;
     }
 }
