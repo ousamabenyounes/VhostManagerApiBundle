@@ -1,3 +1,7 @@
+SF2 test project / not ready to use yet
+
+
+
 VhostManagerApiBundle
 =====================
 
